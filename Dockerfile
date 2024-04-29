@@ -25,7 +25,7 @@ RUN pnpm install
 COPY --from=pruner /app/out/full/ .
 COPY turbo.json turbo.json
 
-RUN SKIP_ENV_CHECK=true pnpm turbo run build --filter=builder...
+## RUN SKIP_ENV_CHECK=true pnpm turbo run build --filter=builder...
 
 FROM base AS runner
 WORKDIR /app
