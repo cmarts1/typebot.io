@@ -1,4 +1,4 @@
-FROM node:18.12-bullseye-slim AS base
+FROM node:17-bullseye-slim AS base
 WORKDIR /app
 ARG SCOPE
 ENV SCOPE=${SCOPE}
