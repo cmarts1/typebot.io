@@ -26,6 +26,7 @@ COPY --from=pruner /app/out/full/ .
 COPY turbo.json turbo.json
 
 ## RUN SKIP_ENV_CHECK=true pnpm turbo run build --filter=builder...
+RUN pnpm turbo run build
 
 FROM base AS runner
 WORKDIR /app
